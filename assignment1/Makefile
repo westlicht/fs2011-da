@@ -1,12 +1,12 @@
 CC=gcc
 CXX=g++
 RM=rm -f
-CPPFLAGS=-g $(shell root-config --cflags)
-LDFLAGS=-g $(shell root-config --ldflags)
-LDLIBS=$(shell root-config --libs)
+CPPFLAGS=-g -Wall
+LDFLAGS=-g
+LDLIBS=
 
 SRCS=assignment.cpp
-OBJS=$(subst .cc,.o,$(SRCS))
+OBJS=$(subst .cpp,.o,$(SRCS))
 
 all: assignment 
 
